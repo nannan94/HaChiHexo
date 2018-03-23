@@ -166,7 +166,10 @@ h1, h2, h3 {
 	display: block;
 	object-fit: cover;
 }
-
+.gallery{
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
 /* Image Hover Effect */
 
 .hovereffect {
@@ -177,7 +180,7 @@ h1, h2, h3 {
   overflow: hidden;
   position: relative;
 	text-align: center;
-	padding-top:5%;
+
 	
 }
 
@@ -237,14 +240,11 @@ h1, h2, h3 {
 }
 .hovereffect:hover .galleryoverlay{
 	cursor: pointer;
-	height:95%;
-	margin-top: 5%;
+	height:100%;
 	background-color: rgba(0, 0, 0, 0.5);
 
 }
-.hovereffect:hover .galleryoverlay .overlay-text{
-	margin-top: -2.5%;
-}
+
 .galleryoverlay .overlay-text{
 	font-family: Oswald;
 	color:#fff;
@@ -341,7 +341,7 @@ h1, h2, h3 {
 	width:100%;
 }
 .row{
-	margin-top:-3%!important;
+	margin-top:-5%!important;
 }
 @media screen and (max-width:780px) {
 	.navbar-nav{
