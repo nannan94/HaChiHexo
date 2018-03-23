@@ -1,0 +1,12 @@
+<!-- Gallery -->
+<% if (item.cover_image && item.cover_image.length){ %>
+<div class="portfolio-content">
+  <img class="img-fluid project-img" src="<%- config.root %><%- item.cover_image %>" alt="<%- item.title || "Untitled" %>">
+</div>
+<% } %>
+
+
+<div class="pt-lg-3 mb-4 px-4 portfolio-content">
+  <div class="kongge" style="width:100%;height:1rem;"></div>
+  <%- item.content %>
+</div>

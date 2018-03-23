@@ -1,0 +1,10 @@
+# Google Analytics Tracking ID
+google_analytics:
+
+# Default portfolio post
+default_cover_image: images/unsplash.jpg
+theme.default_photo: images/3.jpg
+default_post_title: zhaoyang Item
+# Header
+title: HACHI DESIGN
+workname: ©Zy 2018

@@ -1,0 +1,40 @@
+<%- partial('_partial/page-full', {item: page}) %>
+<!--遮罩-->
+<div class="gallery_wrapper">
+    <div class="coverWrapper" id="cover"></div>
+    <div class="col-12 mb-4 col-12 gallery_img">
+        <img id="preImg" src="" alt="">
+    </div>
+</div>
+
+<script>
+    //遮罩
+
+    var galleryImg = document.querySelectorAll('.overlay');
+    var wrapper = document.querySelector('.gallery_wrapper');
+
+    for(var i = 0, length = galleryImg.length; i < length; i++) {
+        var click = gaImg(galleryImg[i]);
+        galleryImg[i].addEventListener('click',click,true);
+    }
+
+    function gaImg(el){
+        return function () {
+            var parent = el.parentNode;
+            var img = parent.querySelector('img')
+            var imgsrc = img.getAttribute('src');
+            var preImg = document.getElementById('preImg');
+
+            preImg.setAttribute("src",imgsrc);
+            if(wrapper.classList.contains('active')){
+                wrapper.classList.remove('active');
+            }else{
+                wrapper.classList.add('active');
+            }
+        }
+    }
+    var cover = document.getElementById('cover');
+        cover.addEventListener('click',function(){
+        wrapper.classList.remove('active');
+    })
+</script>

@@ -1,0 +1,19 @@
+<nav class="wow animated navbar navbar-light py-3 my-3 mb-sm-5 pulse">
+  <a class="navbar-brand one" href="<%- config.root %>"><%-config.title || ""%></a>
+  <a class="navbar-brand two"><%-config.detail || ""%></a>
+  <!-- <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+  <div class="collapse navbar-collapse text-center collapsed collapsed show navbar-toggleable-sm" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto my-auto ulnav">
+      <% for (var i in site.data.menu){ %>
+        <li class="nav-item">
+          <a class="nav-link" href="<%- url_for(site.data.menu[i]) %>"><%= i %></a>
+          <a class="nav-link line" style="vertical-align: inherit; color: rgb(0, 0, 0);">/</a>
+        </li>
+        <% } %>
+
+    </ul>
+  </div>
+</nav>
+
